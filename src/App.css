@@ -1,12 +1,26 @@
-.container {
+/* ----------- general ----------- */
+.wrapper {
   height: 100vh;
 
   padding: 2.8rem 1.6rem;
+
+  font-size: 1.5rem;
 }
 
+.wrapper p {
+  line-height: 2.6rem;
+}
+
+.wrapper ul {
+  list-style: none;
+}
+
+/* ----------- navigation bar menu ----------- */
 .navigationbar {
   display: flex;
   justify-content: space-between;
+
+  margin-bottom: 3.2rem;
 }
 
 .navigationbar .menu {
@@ -24,42 +38,211 @@
   position: fixed;
 }
 
-.container.menu-expanded .navigationbar .close-menu-button {
+/* ----------- navigation bar menu expanded ----------- */
+.wrapper.menu-expanded .navigationbar .close-menu-button {
   visibility: visible;
-  position: initial;
+  position: fixed;
+
+  right: 1.6rem;
 
   z-index: 999;
 }
 
-.container.menu-expanded .navigationbar .open-menu-button {
+.wrapper.menu-expanded .navigationbar .open-menu-button {
   visibility: hidden;
   position: fixed;
 }
-.container.menu-expanded .navigationbar .menu,
-.container.menu-expanded .navigationbar .menu .menu-list {
+.wrapper.menu-expanded .navigationbar .menu,
+.wrapper.menu-expanded .navigationbar .menu .menu-list {
   height: 100%;
   position: fixed;
   right: 0;
   top: 0;
 }
 
-.container.menu-expanded .navigationbar .menu {
+.wrapper.menu-expanded .navigationbar .menu {
   background: hsla(240, 100%, 5%, 0.5);
   width: 100%;
 
   display: block;
 }
 
-.container.menu-expanded .navigationbar .menu .menu-list {
-  list-style: none;
-
+.wrapper.menu-expanded .navigationbar .menu .menu-list {
   background: var(--neutral-off-white);
   width: 70%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 2.4rem;
 
-  padding-left: 2.4rem;
+  padding: 24rem 0 0 2.4rem;
+}
+
+/* ----------- main header ----------- */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  margin-bottom: 6.4rem;
+}
+
+header .hero-image {
+  width: 100%;
+  height: 30rem;
+
+  object-fit: cover;
+}
+
+header .hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+header .hero-info h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+header .hero-info p {
+  font-size: 1.5;
+
+  margin-bottom: 2.4rem;
+}
+
+header .hero-info .button {
+  padding: 1.5rem 3rem;
+
+  display: inline-block;
+
+  background: var(--primary-soft-red);
+  color: var(--neutral-off-white);
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+}
+
+/* ----------- main aside ----------- */
+aside#new {
+  background: var(--neutral-very-dark-blue);
+  color: var(--neutral-off-white);
+
+  padding: 2.4rem 2rem;
+}
+
+aside#new h2 {
+  font-size: 3.2rem;
+  color: var(--primary-soft-orange);
+
+  margin-bottom: 3.5rem;
+}
+
+aside#new .articles-wrapper article:last-child {
+  margin-bottom: -3rem;
+}
+
+aside#new .articles-wrapper article:last-child .divider {
+  border: none;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    padding: 9rem 16.5rem;
+  }
+
+  .navigationbar {
+    margin-bottom: 6rem;
+  }
+
+  .navigationbar .open-menu-button {
+    display: none;
+  }
+
+  .navigationbar .menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .navigationbar .menu .menu-list {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .navigationbar .menu .menu-list .menu-item a {
+    font-size: 1.5rem;
+
+    color: var(--neutral-dark-grayish-blue);
+
+    transition: color 200ms;
+  }
+
+  .navigationbar .menu .menu-list .menu-item a:hover {
+    color: var(--primary-soft-red);
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 3rem;
+  }
+
+  header {
+    margin-bottom: 0;
+  }
+
+  header .hero-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header .hero-info .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  header .hero-info h1 {
+    font-size: 5.6rem;
+  }
+
+  header .hero-info p {
+    font-size: 1.5;
+    color: var(--neutral-dark-grayish-blue);
+  }
+
+  header .hero-info .button {
+    padding: 0;
+    width: 18.5rem;
+    height: 4.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.4rem;
+
+    transition: background-color 200ms;
+  }
+
+  header .hero-info .button:hover {
+    background: var(--neutral-very-dark-blue);
+  }
+
+  aside#new {
+    padding: 3.2rem 2.4rem;
+  }
+
+  aside#new h2 {
+    font-size: 4rem;
+  }
+
+  article .article-title:hover {
+    color: var(--primary-soft-orange);
+  }
 }
