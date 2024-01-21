@@ -1,0 +1,25 @@
+article {
+  margin-bottom: 3rem;
+
+  line-height: 2.6rem;
+}
+
+article .article-title {
+  text-decoration: none;
+
+  color: var(--neutral-off-white);
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  transition: color 200ms;
+}
+
+article .article-description {
+  color: var(--neutral-grayish-blue);
+}
+
+article .divider {
+  margin-top: 3rem;
+  border-top: 0.1rem solid var(--neutral-dark-grayish-blue);
+}

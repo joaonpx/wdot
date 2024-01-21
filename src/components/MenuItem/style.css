@@ -1,3 +1,6 @@
-li {
-  font-size: 1.8rem;
+.menu-item a {
+  font-size: 2.4rem;
+  color: var(--neutral-dark-blue);
+
+  text-decoration: none;
 }
