@@ -1,6 +1,5 @@
 section {
   display: flex;
-  align-items: center;
   gap: 2.4rem;
 
   margin-bottom: 3.2rem;
@@ -8,7 +7,7 @@ section {
 
 section .section-image {
   width: 10rem;
-  height: 13rem;
+  height: 100%;
   object-fit: cover;
 }
 
