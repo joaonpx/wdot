@@ -8,6 +8,11 @@ import { MenuItem } from "./components/MenuItem";
 import { Article } from "./components/Article";
 import { Section } from "./components/Section";
 
+import heroImg from "./assets/image-web-3-desktop.jpg";
+import retroPcsImg from "./assets/image-retro-pcs.jpg";
+import topLaptopsImg from "./assets/image-top-laptops.jpg";
+import gamingGrowthImg from "./assets/image-gaming-growth.jpg";
+
 import "./App.css";
 
 export function App() {
@@ -83,11 +88,7 @@ export function App() {
 
       <main id="home">
         <header>
-          <img
-            className="hero-image"
-            src="https://www.eclosio.ong/wp-content/uploads/2018/08/default.png"
-            alt="Hero Image"
-          />
+          <img className="hero-image" src={heroImg} alt="Hero Image" />
           <div className="hero-info">
             <h1 className="hero-title">The Bright Future of Web 3.0?</h1>
             <div className="info-wrapper">
@@ -123,23 +124,23 @@ export function App() {
 
       <div className="sections">
         <Section
-          img="https://www.eclosio.ong/wp-content/uploads/2018/08/default.png"
+          img={retroPcsImg}
           number="01"
           title="Reviving Retro PCs"
           description="What happens when old PCs are given modern upgrades?"
         />
 
         <Section
-          img="https://www.eclosio.ong/wp-content/uploads/2018/08/default.png"
+          img={topLaptopsImg}
           number="02"
-          title="Reviving Retro PCs"
-          description="What happens when old PCs are given modern upgrades?"
+          title="Top 10 Laptops of 2022"
+          description="Our best picks for various needs and budgets."
         />
         <Section
-          img="https://www.eclosio.ong/wp-content/uploads/2018/08/default.png"
+          img={gamingGrowthImg}
           number="03"
-          title="Reviving Retro PCs"
-          description="What happens when old PCs are given modern upgrades?"
+          title="The Growth of Gaming"
+          description="How the pandemic has sparked fresh opportunities."
         />
       </div>
     </div>
