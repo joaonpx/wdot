@@ -258,7 +258,10 @@ aside#new .articles-wrapper article:last-child .divider {
 
   .sections {
     display: flex;
+    justify-content: space-between;
     gap: 3rem;
+
+    padding-bottom: 0;
   }
 
   section .section-title:hover {
