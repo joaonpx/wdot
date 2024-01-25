@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import logo from "./assets/logo.svg";
 import menuIcon from "./assets/icon-menu.svg";
 import menuCloseIcon from "./assets/icon-menu-close.svg";
-import heroImg from "./assets/image-web-3-desktop.jpg";
 
 import { MenuItem } from "./components/MenuItem";
 import { Article } from "./components/Article";
+import { Section } from "./components/Section";
 
 import "./App.css";
 
@@ -18,6 +18,34 @@ export function App() {
   function closeMenu() {
     document.querySelector(".wrapper").classList.remove("menu-expanded");
   }
+
+  // function handleUpdateHero(data) {
+  //   let randomIndex = Math.floor(Math.random() * data.articles.length);
+
+  //   document.querySelector(".hero-image").src =
+  //     data.articles[randomIndex].urlToImage;
+  //   document.querySelector(".hero-title").textContent =
+  //     data.articles[randomIndex].title;
+  //   document.querySelector(".hero-description").textContent =
+  //     data.articles[randomIndex].description;
+  // }
+
+  // async function loadData() {
+  //   var url =
+  //     "https://newsapi.org/v2/everything?" +
+  //     "q=Technology&" +
+  //     "sortBy=popularity&" +
+  //     "language=pt&" +
+  //     "apiKey=0";
+
+  //   var req = new Request(url);
+
+  //   await fetch(req).then((res) => {
+  //     res.json().then((data) => {
+  //       handleUpdateHero(data);
+  //     });
+  //   });
+  // }
 
   useEffect(() => {
     const menuItems = document.querySelectorAll(".menu-item");
@@ -55,11 +83,15 @@ export function App() {
 
       <main id="home">
         <header>
-          <img className="hero-image" src={heroImg} alt="Hero Image" />
+          <img
+            className="hero-image"
+            src="https://www.eclosio.ong/wp-content/uploads/2018/08/default.png"
+            alt="Hero Image"
+          />
           <div className="hero-info">
-            <h1>The Bright Future of Web 3.0?</h1>
+            <h1 className="hero-title">The Bright Future of Web 3.0?</h1>
             <div className="info-wrapper">
-              <p>
+              <p className="hero-description">
                 We dive into the next evolution of the web that claims to put
                 the power of the platforms back into the hands of the people.
                 But is it really fulfilling its promise?
@@ -88,6 +120,28 @@ export function App() {
           </div>
         </aside>
       </main>
+
+      <div className="sections">
+        <Section
+          img="https://www.eclosio.ong/wp-content/uploads/2018/08/default.png"
+          number="01"
+          title="Reviving Retro PCs"
+          description="What happens when old PCs are given modern upgrades?"
+        />
+
+        <Section
+          img="https://www.eclosio.ong/wp-content/uploads/2018/08/default.png"
+          number="02"
+          title="Reviving Retro PCs"
+          description="What happens when old PCs are given modern upgrades?"
+        />
+        <Section
+          img="https://www.eclosio.ong/wp-content/uploads/2018/08/default.png"
+          number="03"
+          title="Reviving Retro PCs"
+          description="What happens when old PCs are given modern upgrades?"
+        />
+      </div>
     </div>
   );
 }

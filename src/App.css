@@ -5,6 +5,8 @@
   padding: 2.8rem 1.6rem;
 
   font-size: 1.5rem;
+
+  color: var(--neutral-very-dark-blue);
 }
 
 .wrapper p {
@@ -110,6 +112,8 @@ header .hero-info p {
   font-size: 1.5;
 
   margin-bottom: 2.4rem;
+
+  color: var(--neutral-dark-grayish-blue);
 }
 
 header .hero-info .button {
@@ -133,6 +137,7 @@ aside#new {
   color: var(--neutral-off-white);
 
   padding: 2.4rem 2rem;
+  margin-bottom: 6.4rem;
 }
 
 aside#new h2 {
@@ -148,6 +153,11 @@ aside#new .articles-wrapper article:last-child {
 
 aside#new .articles-wrapper article:last-child .divider {
   border: none;
+}
+
+/* ----------- sections ----------- */
+.sections {
+  padding-bottom: 8rem;
 }
 
 @media (min-width: 1024px) {
@@ -244,5 +254,15 @@ aside#new .articles-wrapper article:last-child .divider {
 
   article .article-title:hover {
     color: var(--primary-soft-orange);
+  }
+
+  .sections {
+    display: flex;
+    gap: 3rem;
+  }
+
+  section .section-title:hover {
+    color: var(--primary-soft-red);
+    cursor: pointer;
   }
 }
